@@ -1,0 +1,26 @@
+{
+    "hugs" : {
+        "quantity" : 1000,
+        "name" : "Fluffy hugs",
+        "cost" : 0,
+        "Description" : "Warm hugs from Fluffy Muffin in hopes to make you smile"
+    },
+    "sweet_apples" : {
+        "quantity" : 20,
+        "name" : "Sweet Apple",
+        "cost" : 10,
+        "Description" : "Sweet Apples, hand picked by Fluffy Muffin himself.. used to tame Monsters"
+    },
+    "solid_rocks" : {
+        "quantity" : 20,
+        "name" : "Solid Rocks",
+        "cost" : 10,
+        "Description" : "Solid Rocks, for especially stubborn monsters.. used to tame Monsters"
+    },
+    "memory_gems" : {
+        "quantity" : 10,
+        "name" : "Memory Gems",
+        "cost" : 50,
+        "Description" : "Memory Gems, containers of the happiest memories of the creator"
+    }
+}
