@@ -7,7 +7,12 @@ class Admin_Commands(commands.Cog):
 
     @commands.Cog.listener()
     async def on_ready(self):
-        print("Admin commands are loaded...")
+        print("Admin commands are loaded...") 
+        print()
+
+    @commands.command()
+    async def ping(self,ctx) :
+        await ctx.send(f'bot latency {round(self.client.latency * 1000)}ms')
 
 def setup(client):
     client.add_cog(Admin_Commands(client))

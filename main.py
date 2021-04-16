@@ -15,10 +15,6 @@ async def on_ready():   # When the bot is in ready state
     print("bot is ready")
 
 @client.command()
-async def ping(ctx) :
-    await ctx.send(f'bot latency {round(client.latency * 1000)}ms')
-
-@client.command()
 async def clear(ctx, amount=5):
     await ctx.channel.purge(limit=amount)
 
@@ -33,6 +29,16 @@ async def unload(ctx, extention):
 for filename in os.listdir("Cogs"):
     if filename.endswith('.py'):
         client.load_extension(f'Cogs.{filename[:-3]}')
+
+@client.command()
+async def bound_channel( ctx):
+    channel_id = ctx.channel.id
+    with open("config.json", "r") as file:
+        update_channel_id = json.load(file)
+        update_channel_id["channel_id"] = str(channel_id)
+    with open("config.json", "w") as file:
+        file.write(json.dumps(update_channel_id, indent=2))
+    print(update_channel_id)
 
 if __name__ == '__main__' :
     client.run(TOKEN) # Discord API Token
