@@ -12,7 +12,6 @@ with open('config.json', 'r') as file :
 class Shop_Keeper(commands.Cog):
     def __init__(self, client):
         self.client = client
-        #channel = client.get_channel(channel_id)
 
     @commands.Cog.listener()
     async def on_ready(self):
