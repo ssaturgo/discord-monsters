@@ -1,9 +1,15 @@
 import json
+import random
 
-def view_profile(path):
-    with open(f"{path}", "r") as file :
-        profile_json = json.load(file)
-    for i in profile_json["Profile"]:
-        print (i)
+with open(f"Database/Players/S H E I K H#6969.json","r") as file :
+    profile_json = json.load(file)
 
-view_profile("Database/profile_template.json")
+tamed = profile_json["Profile"]["Tamed"]
+if tamed == 0 :
+    with open("Database/monsters.json", "r") as file :
+        monsters_json = json.load(file)
+        dict_entries = dict.keys(monsters_json)
+        list_entries = list(dict_entries)
+        result = random.choice(list_entries)
+        profile_json["Profile"]["Main"] = result
+        profile_json["Discovered"] = result

@@ -2,6 +2,8 @@
     "Profile" : {
         "Name" : "username",
         "Wealth" : 100,
-        "Tamed" : 0
-    }
+        "Tamed" : 0,
+        "Main" : ""
+    },
+    "Discovered" : []
 }

@@ -17,6 +17,7 @@ async def on_ready():   # When the bot is in ready state
 @client.command()
 async def clear(ctx, amount=5):
     await ctx.channel.purge(limit=amount)
+    print(f"cleared {amount} of messages")
 
 @client.command()
 async def load(ctx, extention):
