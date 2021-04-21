@@ -1,23 +1,23 @@
 {
-    "hugs" : {
+    "Fluffy hugs" : {
         "emoji" : "<:dm_item_hugs:832431521113440296>",
         "name" : "Fluffy hugs",
         "cost" : 0,
         "Description" : "Warm hugs from Fluffy Muffin in hopes to make you smile"
     },
-    "sweet_apples" : {
+    "Sweet Apple" : {
         "emoji" : "<:dm_item_apple:832445936424189982>",
         "name" : "Sweet Apple",
         "cost" : 10,
         "Description" : "Sweet Apples, hand picked by Fluffy Muffin himself.. used to tame Monsters"
     },
-    "solid_rocks" : {
+    "Solid Rock" : {
         "emoji" : "<:dm_item_stone:832446887020724254>",
         "name" : "Solid Rock",
         "cost" : 10,
         "Description" : "Solid Rocks, for especially stubborn monsters.. used to tame Monsters"
     },
-    "memory_gems" : {
+    "Memory Gems" : {
         "emoji" : "<:dm_item_memory_gem:832436630500409364>",
         "name" : "Memory Gems",
         "cost" : 50,

@@ -12,7 +12,7 @@ client = commands.Bot(command_prefix='!')
 
 @client.event
 async def on_ready():   # When the bot is in ready state
-    print("bot is ready")
+    print("Discord Bot is ready...")
 
 @client.command()
 async def clear(ctx, amount=5):

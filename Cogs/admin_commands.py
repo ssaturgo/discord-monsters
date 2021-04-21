@@ -11,7 +11,6 @@ class Admin_Commands(commands.Cog):
     @commands.Cog.listener()
     async def on_ready(self):
         print("Admin commands are loaded...") 
-        print()
 
     @commands.command()
     async def ping(self,ctx) :

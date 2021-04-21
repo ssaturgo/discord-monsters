@@ -3,7 +3,9 @@
         "Name" : "username",
         "Wealth" : 100,
         "Tamed" : 0,
-        "Main" : ""
+        "Main" : "",
+        "Pet Name" : ""
     },
-    "Discovered" : []
+    "Discovered" : [],
+    "Inventory" : {}
 }
