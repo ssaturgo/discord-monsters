@@ -11,11 +11,12 @@ class Inventory_System(commands.Cog):
         username = str(ctx.author)
         pfp = ctx.author.avatar_url
         embed_msg = discord.Embed(
-            title=f"{username}'s Inventory",
+            title=f"{username}'s Backpack",
             color=0xfef3c0
         )
         with open(f"Database/Players/{username}.json", "r") as file :
             profile_json = json.load(file)
+            player_money = profile_json["Profile"]["Wealth"]
         with open("Database/shop_inventory.json", "r") as file :
             shop_items = json.load(file)
         player_inventory = ""
@@ -29,6 +30,8 @@ class Inventory_System(commands.Cog):
             player_inventory = "You currently have no items"
         embed_msg.description = player_inventory
         embed_msg.set_thumbnail(url=pfp)
+        embed_msg.add_field(name="--------------------", value=f"<:dm_currency:832443505157603398> {player_money}")
         await ctx.send(embed=embed_msg)
+        print(f"{username} opened his bag")
 def setup(client):
     client.add_cog(Inventory_System(client))

@@ -1,0 +1,20 @@
+{
+    "Goblin" : {
+        "icon" : "<:dm_goblin:834913704100233307>",
+        "health" : 3,
+        "attack" : 2,
+        "accuracy" : 40
+    },
+    "Bandit" : {
+        "icon" : "<:dm_bandit:834920605375397949>",
+        "health" : 4,
+        "attack" : 1,
+        "accuracy" : 50
+    },
+    "Sorcerer" : {
+        "icon" : "<:dm_sorc:834922918240452659>",
+        "health" : 2,
+        "attack" : 3,
+        "accuracy" : 30
+    }
+}

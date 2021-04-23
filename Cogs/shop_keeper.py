@@ -72,11 +72,18 @@ class Shop_Keeper(commands.Cog):
         if player_money < order_cost :
             embed_msg.description = f"Sorry {username}, You do not have enough gold.. 🙁"
         else :
-            profile_json["Profile"]["Wealth"] -= order_cost
-            profile_json["Inventory"][item_lookup] = quantity
-            with open (f"Database/Players/{username}.json", "w") as file :
-                json.dump(profile_json, file, indent=2)
-            embed_msg.description = f"Thank you for your purchase! {username}"
+            if quantity == 0 :
+                embed_msg.description = f"{username}.. what are you trying to do? 😅"
+            elif item_id != 1 and item_id != 4:
+                profile_json["Profile"]["Wealth"] -= order_cost
+                profile_json["Inventory"][item_lookup] += quantity
+                with open (f"Database/Players/{username}.json", "w") as file :
+                    json.dump(profile_json, file, indent=2)
+                embed_msg.description = f"Thank you for your purchase! {username}"
+            elif item_id == 4 :
+                embed_msg.description = f"I'm sorry {username}.. I only sell these to Zeph"
+            else:
+                embed_msg.description = f"{quantity} hugs coming your way! 😄"
         await ctx.send(embed=embed_msg)
 
 def setup(client):

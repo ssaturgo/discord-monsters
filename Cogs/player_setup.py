@@ -93,6 +93,7 @@ class Player_Setup(commands.Cog):
         with open(f"Database/Players/{username}.json", "w") as file :
             json.dump(profile, file)
         await ctx.send(f"Renamed {pet_id} to {arg}")
+        print(f"{username} renamed {pet_id} to {arg}...")
 
 def setup(client):
     client.add_cog(Player_Setup(client))
