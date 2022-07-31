@@ -1,2 +1,3 @@
 # discord-monsters
-This is a discord bot I created for the sole purpose of making my girlfriend blush on our one year anniversary
+This is a game made with Discord Python API using their bot system
+I made this game as a gift for my Girlfriend celebrating our one year anniversary.
